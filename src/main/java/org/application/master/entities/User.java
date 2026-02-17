@@ -4,13 +4,14 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.function.Consumer;
 
 
 @Entity
 //determina que esta classe trata-se de uma entidade a ser mantida no banco de dados
 @Table(name = "tb_user")
 //determina o nome da tabela onde serão armazenados os dados, caso não informássemos, seria o mesmo nome da classe
-public class User implements Serializable {
+public class User implements Serializable{
    @Id
    //determina que o atributo id da classe vai ser o ‘id’ do banco e o mesmo será chave primaria
    @GeneratedValue(strategy = GenerationType.IDENTITY)
